@@ -1,6 +1,4 @@
-﻿# Get API key from here: https://ipgeolocation.io/
-$API_KEY      = "d4600b4efdef42b39828f5155041a457"
-$LOGFILE_NAME = "failed_rdp.log"
+﻿$LOGFILE_NAME = "failed_rdp.log"
 $LOGFILE_PATH = "C:\ProgramData\$($LOGFILE_NAME)"
 
 # This filter will be used to filter failed RDP events from Windows Event Viewer
@@ -22,17 +20,17 @@ $XMLFilter = @'
     a destination host of "samplehost"
 #>
 Function write-Sample-Log() {
-    "latitude:47.91542,longitude:-120.60306,destinationhost:samplehost,username:fakeuser,sourcehost:24.16.97.222,state:Washington,country:United States,label:United States - 24.16.97.222,timestamp:2021-10-26 03:28:29" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:-22.90906,longitude:-47.06455,destinationhost:samplehost,username:lnwbaq,sourcehost:20.195.228.49,state:Sao Paulo,country:Brazil,label:Brazil - 20.195.228.49,timestamp:2021-10-26 05:46:20" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:52.37022,longitude:4.89517,destinationhost:samplehost,username:CSNYDER,sourcehost:89.248.165.74,state:North Holland,country:Netherlands,label:Netherlands - 89.248.165.74,timestamp:2021-10-26 06:12:56" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:40.71455,longitude:-74.00714,destinationhost:samplehost,username:ADMINISTRATOR,sourcehost:72.45.247.218,state:New York,country:United States,label:United States - 72.45.247.218,timestamp:2021-10-26 10:44:07" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:33.99762,longitude:-6.84737,destinationhost:samplehost,username:AZUREUSER,sourcehost:102.50.242.216,state:Rabat-Salé-Kénitra,country:Morocco,label:Morocco - 102.50.242.216,timestamp:2021-10-26 11:03:13" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:-5.32558,longitude:100.28595,destinationhost:samplehost,username:Test,sourcehost:42.1.62.34,state:Penang,country:Malaysia,label:Malaysia - 42.1.62.34,timestamp:2021-10-26 11:04:45" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:41.05722,longitude:28.84926,destinationhost:samplehost,username:AZUREUSER,sourcehost:176.235.196.111,state:Istanbul,country:Turkey,label:Turkey - 176.235.196.111,timestamp:2021-10-26 11:50:47" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:55.87925,longitude:37.54691,destinationhost:samplehost,username:Test,sourcehost:87.251.67.98,state:null,country:Russia,label:Russia - 87.251.67.98,timestamp:2021-10-26 12:13:45" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:52.37018,longitude:4.87324,destinationhost:samplehost,username:AZUREUSER,sourcehost:20.86.161.127,state:North Holland,country:Netherlands,label:Netherlands - 20.86.161.127,timestamp:2021-10-26 12:33:46" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:17.49163,longitude:-88.18704,destinationhost:samplehost,username:Test,sourcehost:45.227.254.8,state:null,country:Belize,label:Belize - 45.227.254.8,timestamp:2021-10-26 13:13:25" | Out-File $LOGFILE_PATH -Append -Encoding utf8
-    "latitude:-55.88802,longitude:37.65136,destinationhost:samplehost,username:Test,sourcehost:94.232.47.130,state:Central Federal District,country:Russia,label:Russia - 94.232.47.130,timestamp:2021-10-26 14:25:33" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:47.91542,longitude:-120.60306,destinationhost:samplehost,username:fakeuser,sourcehost:24.16.97.222,state:Washington,country:United States,label:United States - 24.16.97.222,timestamp:2021-10-26 03:28:29,isp:Hewlett Packard Enterprise Company,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:-22.90906,longitude:-47.06455,destinationhost:samplehost,username:lnwbaq,sourcehost:20.195.228.49,state:Sao Paulo,country:Brazil,label:Brazil - 20.195.228.49,timestamp:2021-10-26 05:46:20,isp:WIND Telecomunicazioni spa,reverse:ppp-229-165.98-62.wind.it,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:52.37022,longitude:4.89517,destinationhost:samplehost,username:CSNYDER,sourcehost:89.248.165.74,state:North Holland,country:Netherlands,label:Netherlands - 89.248.165.74,timestamp:2021-10-26 06:12:56,isp:Ferris State University,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:40.71455,longitude:-74.00714,destinationhost:samplehost,username:ADMINISTRATOR,sourcehost:72.45.247.218,state:New York,country:United States,label:United States - 72.45.247.218,timestamp:2021-10-26 10:44:07,isp:AT&T Services, Inc.,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:33.99762,longitude:-6.84737,destinationhost:samplehost,username:AZUREUSER,sourcehost:102.50.242.216,state:Rabat-Salé-Kénitra,country:Morocco,label:Morocco - 102.50.242.216,timestamp:2021-10-26 11:03:13,isp:Orange Business Communications Technology Limited,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:-5.32558,longitude:100.28595,destinationhost:samplehost,username:Test,sourcehost:42.1.62.34,state:Penang,country:Malaysia,label:Malaysia - 42.1.62.34,timestamp:2021-10-26 11:04:45,isp:CEGETEL,reverse:134.56.126.78.rev.sfr.net,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:41.05722,longitude:28.84926,destinationhost:samplehost,username:AZUREUSER,sourcehost:176.235.196.111,state:Istanbul,country:Turkey,label:Turkey - 176.235.196.111,timestamp:2021-10-26 11:50:47,isp:DoD Network Information Center,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:55.87925,longitude:37.54691,destinationhost:samplehost,username:Test,sourcehost:87.251.67.98,state:null,country:Russia,label:Russia - 87.251.67.98,timestamp:2021-10-26 12:13:45,isp:Korea Telecom,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:52.37018,longitude:4.87324,destinationhost:samplehost,username:AZUREUSER,sourcehost:20.86.161.127,state:North Holland,country:Netherlands,label:Netherlands - 20.86.161.127,timestamp:2021-10-26 12:33:46,isp:NTT Communications Corporation,reverse:p6217-ipbfpfx02fukuokachu.fukuoka.ocn.ne.jp,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:17.49163,longitude:-88.18704,destinationhost:samplehost,username:Test,sourcehost:45.227.254.8,state:null,country:Belize,label:Belize - 45.227.254.8,timestamp:2021-10-26 13:13:25,isp:National Aeronautics and Space Administration,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+    "latitude:-55.88802,longitude:37.65136,destinationhost:samplehost,username:Test,sourcehost:94.232.47.130,state:Central Federal District,country:Russia,label:Russia - 94.232.47.130,timestamp:2021-10-26 14:25:33,isp:Korea Telecom,reverse:null,mobile:false,proxy:false" | Out-File $LOGFILE_PATH -Append -Encoding utf8
 }
 
 # This block of code will create the log file if it doesn't already exist
@@ -46,7 +44,7 @@ while ($true)
 {
     
     Start-Sleep -Seconds 1
-    # This retrieves events from Windows EVent Viewer based on the filter
+    # This retrieves events from Windows Event Viewer based on the filter
     $events = Get-WinEvent -FilterXml $XMLFilter -ErrorAction SilentlyContinue
     if ($Error) {
         #Write-Host "No Failed Logons found. Re-run script when a login has failed."
@@ -107,27 +105,33 @@ while ($true)
             
                 # Announce the gathering of geolocation data and pause for a second as to not rate-limit the API
                 #Write-Host "Getting Latitude and Longitude from IP Address and writing to log" -ForegroundColor Yellow -BackgroundColor Black
-                Start-Sleep -Seconds 1
+                Start-Sleep -Seconds 2
 
                 # Make web request to the geolocation API
-                # For more info: https://ipgeolocation.io/documentation/ip-geolocation-api.html
-                $API_ENDPOINT = "https://api.ipgeolocation.io/ipgeo?apiKey=$($API_KEY)&ip=$($sourceIp)"
+                # For more info: https://ip-api.com/docs
+                $API_ENDPOINT = "http://ip-api.com/json/$($sourceIp)?fields=262143"
                 $response = Invoke-WebRequest -UseBasicParsing -Uri $API_ENDPOINT
 
                 # Pull Data from the API response, and store them in variables
                 $responseData = $response.Content | ConvertFrom-Json
-                $latitude = $responseData.latitude
-                $longitude = $responseData.longitude
-                $state_prov = $responseData.state_prov
-                if ($state_prov -eq "") { $state_prov = "null" }
-                $country = $responseData.country_name
-                if ($country -eq "") {$country -eq "null"}
-
+                $latitude = $responseData.lat
+                $longitude = $responseData.lon
+                $state = $responseData.regionName
+                if ($state -eq "") { $state = "null" }
+                $country = $responseData.country
+                if ($country -eq "") {$country = "null"}
+                $city = $responseData.city
+                if ($city -eq "") {$city = "null"}
+                $mobile = $responseData.mobile
+                $proxy = $responseData.proxy
+                $isp = $responseData.isp
+                $reverseDNS = $responseData.reverse
+                if ($reverseDNS -eq "") {$reverseDNS = "null"}
                 # Write all gathered data to the custom log file. It will look something like this:
                 #
-                "latitude:$($latitude),longitude:$($longitude),destinationhost:$($destinationHost),username:$($username),sourcehost:$($sourceIp),state:$($state_prov), country:$($country),label:$($country) - $($sourceIp),timestamp:$($timestamp)" | Out-File $LOGFILE_PATH -Append -Encoding utf8
+                "latitude:$($latitude),longitude:$($longitude),destinationhost:$($destinationHost),username:$($username),sourcehost:$($sourceIp),state:$($state), country:$($country),city:$($city),label:$($country) - $($sourceIp),timestamp:$($timestamp),isp:$($isp),DNS:$($reverseDNS),mobile:$($mobile),proxy:$($proxy)" | Out-File $LOGFILE_PATH -Append -Encoding utf8
 
-                Write-Host -BackgroundColor Black -ForegroundColor Magenta "latitude:$($latitude),longitude:$($longitude),destinationhost:$($destinationHost),username:$($username),sourcehost:$($sourceIp),state:$($state_prov),label:$($country) - $($sourceIp),timestamp:$($timestamp)"
+                Write-Host -BackgroundColor Black -ForegroundColor Blue "latitude:$($latitude),longitude:$($longitude),destinationhost:$($destinationHost),username:$($username),sourcehost:$($sourceIp),state:$($state),label:$($country) - $($sourceIp),timestamp:$($timestamp),isp:$($isp),DNS:$($reverseDNS),mobile:$($mobile),proxy:$($proxy)"
             }
             else {
                 # Entry already exists in custom log file. Do nothing, optionally, remove the # from the line below for output
