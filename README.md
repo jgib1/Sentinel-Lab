@@ -34,7 +34,7 @@ look up the attackers Geolocation information and plot it on an Azure Sentinel M
 <h2>Additional username data from custom logs</h2>
 
 <p align="center">
-<img src="https://i.imgur.com/krRFrK5.jpg" height="85%" width="85%" alt="Image Analysis Dataflow"/>
+<img src="https://i.imgur.com/1fDSFy6.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
 </p>
 
 
